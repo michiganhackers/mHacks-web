@@ -1,0 +1,99 @@
+body {
+  color: #13477d;
+  background: url("/img/texture.png") repeat center;
+}
+.signup {
+  margin: 40px auto;
+  width: 310px;
+  height: 400px;
+  background: #ffffff url("/img/texture.png") repeat fixed center;
+  text-align: center;
+  margin-bottom: 200px;
+}
+a {
+  color: #13477d;
+}
+a:hover {
+  text-decoration: none;
+}
+.date {
+  font-size: 18px;
+}
+.logo img {
+  width: 100%;
+}
+.nav {
+  width: 100%;
+  background-color: #5a5a5a;
+  padding: 10px 0px;
+  text-align: center;
+}
+.navlink {
+  font-size: 20px;
+  margin: 10px;
+  padding: 8px 20px 11px 20px;
+  display: inline;
+}
+.navlink:hover {
+  background: rgba(15, 45, 91, 0.8);
+  color: white;
+  text-decoration: none;
+}
+.button,
+input[type=button],
+input[type=submit],
+button {
+  border: 0px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0.25em 0.5em;
+  padding: 0.75em 2.5em;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  background-color: #13477d;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+}
+.button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+input[type=text]:hover,
+input[type=email]:hover,
+button:hover {
+  background-color: #5a5a5a;
+  color: #FFF;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #FFF;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #FFF;
+}
+input[type=text],
+input[type=email],
+textarea {
+  text-align: right;
+  border-radius: 0px;
+  background-color: #13477d;
+  color: #FFF;
+  margin: 0.25em 0;
+  padding: 0.75em 1.3em;
+  width: 70%;
+  border: 0px;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea {
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+}
+#searchform input[type=text] {
+  width: 100%;
+}
