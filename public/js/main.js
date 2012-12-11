@@ -21,4 +21,10 @@ $(document).ready(function(){
 		});
 
 	});
+
+	$(".navlink").click(function(e){
+		e.preventDefault();
+		$(".tab").hide();
+		$($(this).attr("href")).show();
+	});
 });

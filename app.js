@@ -33,7 +33,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.teaser);
+app.get('/', routes.home);
 app.post('/signup', routes.signup);
 /*app.get('/', routes.index);
 app.get('/schedule', routes.schedule);
