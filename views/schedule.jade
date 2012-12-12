@@ -1,42 +1,222 @@
-extends layout
 
-block content
-	h1 Schedule
-	p Unfortunately our developers don't believe in NTP; Due to clock differences and such, the actual schedule may differ slightly.  Either way, we have 20 hours of solid hack lined up for you guys. 
-	
-	h2 Friday
-	
-	table.schedule
-		tbody
-			tr
-				td 5:30pm
-				td Opening Ceremony
-			tr
-				td 6:00pm
-				td Team building and dinner
-			tr
-				td 6:30pm
-				td Hacking begins 
-
-	h2 Saturday
-	
-	table.schedule
-		tbody
-			tr
-				td 12:00am
-				td Midnight snacks (available all night)
-			tr
-				td 7:00am
-				td Continental Breakfast, served fresh for you by Cafe MH
-			tr
-				td 12:00pm
-				td Lunch
-			tr
-				td 2:30pm
-				td Hacking ends and presentations start
-			tr
-				td 4:00pm
-				td Presentations end
-			tr
-				td 4:30pm
-				td Awards! 
+div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+  span(style='font-size: medium;')
+    br
+div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+  span(style='font-size: large;')
+    strong
+      span(style='text-decoration: underline;') Schedule:
+div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+  strong
+    span(style='text-decoration: underline;')
+      span(style='font-size: medium;')
+        br
+div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+  span(style='font-size: medium;') Note: snacks and nap rooms will be readily available at all times
+div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')  
+div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+  span(style='text-decoration: underline;')
+    span(style='font-size: large;') Friday, February 1
+div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')  
+div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+  table(border='4', cellpadding='13', align='left')
+    tbody
+      tr
+        td
+          span(style='font-size: medium;') 6PM-9PM
+        td
+          p
+            span(style='font-size: medium;') Buses begin arriving
+          p
+            span(style='font-size: medium;') Participants welcome to venture around campus
+          p
+            span(style='font-size: medium;') Team signups and social events 
+      tr
+        td
+          span(style='font-size: medium;') 9PM-11PM
+        td
+          p
+            span(style='color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: medium; line-height: 14px;') Dinner served
+          p
+            br
+            span(style='font-size: medium; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; line-height: 14px;') Main sponsor and keynote speaker make addresses
+          p
+            br
+            span(style='font-size: medium; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; line-height: 14px;') Overview of hackathon rules, turntable.fm use, live 
+          p
+            span(style='font-size: medium; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; line-height: 14px;') Twitter feed, and prizes
+      tr
+        td
+          span(style='font-size: medium;') 11PM
+        td
+          span(style='font-size: medium;') 36-Hour
+          span(style='font-size: medium;') hackathon begins
+  div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+    span(style='font-size: medium;')
+      br
+  div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+    span(style='font-size: medium;')
+      br
+  div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+    span(style='font-size: medium;')
+      br
+  div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+    span(style='font-size: medium;')
+      br
+  div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')  
+div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+  div
+    span(style='text-decoration: underline;')
+      span(style='font-size: large;')
+        br
+  div
+    span(style='text-decoration: underline;')
+      span(style='font-size: large;') Saturday, February 2
+  div
+    span(style='text-decoration: underline;')
+      span(style='font-size: large;')
+        br
+  div
+    div
+      table(style='font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif;', border='4', cellpadding='13', align='left')
+        tbody
+          tr
+            td
+              span(style='font-size: medium;') 9AM
+            td
+              p
+                span(style='font-size: medium;') Full breakfast served
+                span(style='font-size: medium; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; color: #333333; line-height: 14px;')  
+          tr
+            td
+              span(style='font-size: medium;') 12PM
+            td
+              p
+                span(style='color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: medium;')
+                  span(style='line-height: 14px;') *Sessions begin
+          tr
+            td
+              span(style='font-size: medium;') 1PM
+            td
+              p
+                span(style='font-size: medium;') Lunch Served
+          tr
+            td
+              span(style='font-size: medium;') 6PM
+            td
+              p
+                span(style='font-size: medium;') Dinner served
+          tr
+            td
+              span(style='font-size: medium;') 9PM
+            td
+              p
+                span(style='font-size: medium;') *Sessions end
+    div  
+div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+  div(style='color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; line-height: 14px; font-size: 11px;')  
+  div
+    div(style='color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; line-height: 14px;')  
+    div
+      div(style='color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; line-height: 14px;')  
+      div
+        div(style='color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')  
+        div
+          span(style='color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: medium;')
+            span(style='line-height: 14px;')
+              br
+              br
+              br
+              br
+              br
+              br
+              br
+              br
+              br
+              br
+              br
+              br
+              br
+              br
+          br
+          div(style='color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+            span(style='color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: medium;')
+              span(style='line-height: 14px;')
+                br
+          div(style='color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+            div(style='color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+              span(style='text-decoration: underline;')
+                span(style='font-size: large;') Sunday, February 3
+            div(style='color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')  
+            div
+              table(style='font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif;', border='4', cellpadding='13', align='left')
+                tbody
+                  tr
+                    td
+                      span(style='font-size: medium;') 1AM
+                    td
+                      p
+                        span(style='font-size: medium; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; color: #333333; line-height: 14px;') Meal served
+                        span(style='font-size: medium; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; color: #333333; line-height: 14px;')  
+                  tr
+                    td
+                      span(style='font-size: medium;') 9AM
+                    td
+                      p
+                        span(style='color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: medium;')
+                          span(style='line-height: 14px;') Meal served
+                  tr
+                    td
+                      span(style='font-size: medium;') 11AM
+                    td
+                      p
+                        span(style='font-size: medium;') Hacking ends
+                  tr
+                    td
+                      span(style='font-size: medium;') 11AM-12PM
+                    td
+                      p
+                        span(style='font-size: medium;') Grace period - submit video pitch by noon  
+                  tr
+                    td
+                      span(style='font-size: medium;') 12PM-2PM
+                    td
+                      p
+                        span(style='font-size: medium;') Expo showcasing hacks open to public
+                      p
+                        span(style='font-size: medium;') Food served
+                  tr
+                    td
+                      span(style='font-size: medium;') 2PM-4PM
+                    td
+                      p
+                        span(style='font-size: medium;') Final ceremony activites
+                      p
+                        span(style='font-size: medium;') Speaker address
+                      p
+                        span(style='font-size: medium;') Top hacks present to audience
+                      p
+                        span(style='font-size: medium;') Prizes/awards given to hacker teams
+                  tr
+                    td
+                      span(style='font-size: medium;') 5PM
+                    td
+                      p
+                        span(style='font-size: medium;') Teams depart
+            div
+              span(style='font-size: medium;')
+                br
+            div
+              span(style='font-size: medium;')
+                br
+            div  
+div(style='margin-left: 20px; margin-right: 20px; color: #333333; font-family: \'lucida grande\', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px;')
+  div(style='margin-top: 10px; margin-bottom: 10px; line-height: 16px;')
+    span(style='font-size: medium;')
+      | *Sessions: Office hours with companies, breakout sessions, tech talks, company info sessions, interview sessions, and other sponsor-type events that they want to do in their rooms
+  div(style='margin-top: 10px; margin-bottom: 10px; line-height: 16px;')
+    span(style='font-weight: bold;')
+      br
+  div(style='margin-top: 10px; margin-bottom: 10px; line-height: 16px;')
+    span(style='text-decoration: underline; font-size: large;')
+      
