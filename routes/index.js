@@ -16,7 +16,7 @@ exports.signup = function signup(req ,res) {
     if(err) throw err
       collection.insert(req.body, function(err, collection) {
         if(err) res.send("Something is wrong, email ottosipe@umich.edu and complain!");
-        else res.send("<h3> Thanks for signing up. </h3>");
+        else res.send("<h3> Thanks for signing up. </h3><h4> Updates to come </h4>");
       });
   });
   

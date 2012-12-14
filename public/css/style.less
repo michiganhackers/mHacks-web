@@ -1,7 +1,7 @@
 @gray: rgb(90,90,90);
 @hover: rgba(15,45,91,.8);
 @blue: rgb(19,71,125);
-@grayTrans: rgba(90,90,90,.6);
+@grayTrans: rgba(90,90,90,.5);
 
 body {
 	color:@blue;	
@@ -9,19 +9,35 @@ body {
 	padding-top: 40px;
 }
 
+p {
+	margin: 0 0;
+}
+
+a:hover {
+	color: @gray;
+	text-decoration: none;
+}
 .tab {
 	text-align:right;
 }
 
-.signup {
+.social {
+	margin-bottom: 20px;
+}
+
+.social img:hover{
+	-webkit-filter: grayscale(1) opacity(.8)
+}
+
+.left-bar {
 	margin:0 auto;
 	max-width:310px;
 	background: white url("/img/texture.png") repeat fixed center;
 	text-align: center;
 }
 
-.foot {
-	margin-bottom:200px;
+.signup {
+	margin: 0 auto;
 }
 
 a {
@@ -32,19 +48,41 @@ a {
 	font-size: 18px;
 }
 
+.ticker {
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 10px;
+}
+
+.ticker li {
+
+	margin: 10px;
+	display: inline;
+}
+.ticker img {
+	max-height: 100px;
+}
+
 ////
+.main {
+	min-height: 320px;
+	overflow: auto;
+	padding:15px;
+}
 .about {
-	margin-top:70px;
+}
+
+.question {
+	cursor: pointer;
 }
 
 .logo img {
-	width: 90%;
+	width: 80%;
 }
 
 .nav {
 	width:100%;
 	background-color: @grayTrans;
-	//padding: 10px 0px;
 	text-align: right;
 }
 
@@ -69,17 +107,23 @@ a {
 	text-decoration: none;
 }
 
+.bigbtn {
+	font-size: 25px;
+}
+
+.foot {
+	padding-bottom: 30px;
+}
 .button, 
 input[type=button], 
 input[type=submit], 
-button,
-{
+button {
     border: 0px solid rgba(0, 0, 0, 0.1);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0.25em 0;
-    padding: 0.75em 2.5em;
+    padding: 0.75em 1.5em;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
@@ -89,42 +133,42 @@ button,
     cursor: pointer;
     display: inline-block;
 }
+
 .button:hover, 
 input[type=button]:hover, 
 input[type=submit]:hover,
 input[type=text]:hover,
 input[type=email]:hover, 
-button:hover{
+button:hover {
     background-color: @gray;
     color:#FFF; 
 }
 
-
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #FFF;
 }
+
 input:-moz-placeholder, textarea:-moz-placeholder {
   color: #FFF;
 }
+
 input[type=text],
 input[type=email],
-textarea
-{
+textarea {
 	text-align: right;
 	border-radius: 0px;
 	background-color: @blue;
 	color:#FFF;
     margin: 0.25em 0;
     padding: 0.75em 1.3em;
-    width:70%;
+    width: 70%;
     border:0px;
 }
+
 input[type=text]:focus,
 input[type=email]:focus,
-textarea
-{
+textarea {
     border:0px;
     box-shadow: none;
     outline: none;
 }
-#searchform input[type=text]{ width: 100%; }

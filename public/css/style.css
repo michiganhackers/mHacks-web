@@ -3,17 +3,30 @@ body {
   background: url("/img/texture.png") repeat center;
   padding-top: 40px;
 }
+p {
+  margin: 0 0;
+}
+a:hover {
+  color: #5a5a5a;
+  text-decoration: none;
+}
 .tab {
   text-align: right;
 }
-.signup {
+.social {
+  margin-bottom: 20px;
+}
+.social img:hover {
+  -webkit-filter: grayscale(1) opacity(0.8);
+}
+.left-bar {
   margin: 0 auto;
   max-width: 310px;
   background: #ffffff url("/img/texture.png") repeat fixed center;
   text-align: center;
 }
-.foot {
-  margin-bottom: 200px;
+.signup {
+  margin: 0 auto;
 }
 a {
   color: #13477d;
@@ -21,15 +34,32 @@ a {
 .date {
   font-size: 18px;
 }
-.about {
-  margin-top: 70px;
+.ticker {
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 10px;
+}
+.ticker li {
+  margin: 10px;
+  display: inline;
+}
+.ticker img {
+  max-height: 100px;
+}
+.main {
+  min-height: 320px;
+  overflow: auto;
+  padding: 15px;
+}
+.question {
+  cursor: pointer;
 }
 .logo img {
-  width: 90%;
+  width: 80%;
 }
 .nav {
   width: 100%;
-  background-color: rgba(90, 90, 90, 0.6);
+  background-color: rgba(90, 90, 90, 0.5);
   text-align: right;
 }
 .nav a {
@@ -49,6 +79,12 @@ a {
   color: white;
   text-decoration: none;
 }
+.bigbtn {
+  font-size: 25px;
+}
+.foot {
+  padding-bottom: 30px;
+}
 .button,
 input[type=button],
 input[type=submit],
@@ -58,7 +94,7 @@ button {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0.25em 0;
-  padding: 0.75em 2.5em;
+  padding: 0.75em 1.5em;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
@@ -103,7 +139,4 @@ textarea {
   border: 0px;
   box-shadow: none;
   outline: none;
-}
-#searchform input[type=text] {
-  width: 100%;
 }
