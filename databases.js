@@ -11,7 +11,7 @@ var API = module.exports = exports;
 	API.initMongoDB = function initMongoDB(cb) {
 		Database.open(function(err, db) {
 			if(err) { return cb(err); }
-			Database.authenticate(secret.user, secret.pass, cb);
+			Database.authenticate(secret.db.user, secret.db.pass, cb);
 			API.db = Database;
 		});
 	};

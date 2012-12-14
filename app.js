@@ -35,12 +35,7 @@ app.configure('development', function(){
 
 app.get('/', routes.home);
 app.post('/signup', routes.signup);
-/*app.get('/', routes.index);
-app.get('/schedule', routes.schedule);
-app.get('/sponsors', routes.sponsors);
-app.get('/contact', routes.contact);
-app.get('/prizes', routes.prizes);*/
-
+app.get('/email', routes.email);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

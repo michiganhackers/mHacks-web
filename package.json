@@ -9,7 +9,8 @@
     "express": "3.0.x",
     "jade": "*",
     "less-middleware": "*",
-    "mongodb": "x"
+    "mongodb": "x",
+    "nodemailer": "x"
   },
   "engines": {
     "node": "0.8.x",

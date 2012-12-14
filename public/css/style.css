@@ -37,7 +37,8 @@ a {
 .ticker {
   white-space: nowrap;
   overflow: hidden;
-  padding: 10px;
+  padding: 33px 10px 0px 10px;
+  margin-bottom: 0px;
 }
 .ticker li {
   margin: 10px;
@@ -47,9 +48,9 @@ a {
   max-height: 100px;
 }
 .main {
-  min-height: 320px;
+  min-height: 333px;
   overflow: auto;
-  padding: 15px;
+  padding: 0 15px;
 }
 .question {
   cursor: pointer;
