@@ -36,3 +36,19 @@ exports.signup = function signup(req ,res) {
     
   }
 }
+
+exports.admin = function signup(req ,res) {
+  try {
+    mongo.db.collection("signup", function (err, collection) {
+      if(err) throw err
+      collection.find().toArray(function(err, data) {
+        if (err) throw err;
+        res.json(data);
+      });
+    });
+  } catch (err) {
+    res.send("<h4>Sorry something went wrong.</h4> Contact ottosipe@umich.edu");
+    console.log(err);
+    
+  }
+}
