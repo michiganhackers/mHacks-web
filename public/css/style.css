@@ -80,8 +80,8 @@ a {
   color: white;
   text-decoration: none;
 }
-.bigbtn {
-  font-size: 25px;
+#schedule h5 {
+  margin-bottom: 0px;
 }
 .foot {
   padding-bottom: 30px;
