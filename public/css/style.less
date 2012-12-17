@@ -143,6 +143,11 @@ button:hover {
     color:#FFF; 
 }
 
+button:disabled {
+    background-color: @gray;
+    color:#FFF; 
+}
+
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #FFF;
 }
@@ -173,15 +178,4 @@ textarea {
 }
 
 
-input:required:invalid, 
-input:required:-moz-ui-invalid,
-input:required:invalid:focus, 
-input:required:-moz-ui-invalid:focus {
-    border:0px;
-    outline:none;
-	color:#FFF;
-    box-shadow:none !important;
-    -moz-box-shadow:none !important;
-    -webkit-box-shadow:none !important;
-}
 

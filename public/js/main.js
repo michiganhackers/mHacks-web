@@ -1,17 +1,15 @@
 $(document).ready(function(){ 
 
 	$(".email").change(function(event){
-		if($(this).val().indexOf("@") == -1 || $(this).val().indexOf(".edu") == -1) {
-			$(this).tooltip({title:"school email preferred (.edu)", placement:"top",trigger:"manual"}).tooltip('show');
-		} else { 
+		
+		if($(this).val().indexOf("@") == -1 || $(this).val().indexOf(".") == -1){
+			$(this).tooltip({title:"invalid email", placement:"top",trigger:"manual"}).tooltip('show');
+			$(".signup button").attr("disabled","true");
+		} else {
+			$(".signup button").removeAttr("disabled");
 			$(this).tooltip('hide');
-			
-
 		}
-		$("#signup button").show();
-	})
-	$(".name").change(function(event) {
-		$(".signup button").show();
+		
 	})
 	$(".signup").submit(function(event){
 		event.preventDefault();

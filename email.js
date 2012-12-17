@@ -11,7 +11,7 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 
 exports.send = function(user) {
     // send mail with defined transport object
-
+    if(user == null) return;
     var template = jade.compile(fs.readFileSync(__dirname+'/email/signup.jade', 'utf8'));
     var html = template({
         name: user.name,
@@ -19,10 +19,10 @@ exports.send = function(user) {
     });
 
     var opts = {
-        from: "MHacks <no-reply@mhacks.org>", // sender address
-        replyTo: "hackathon@umich.edu",
+        from: "mHacks <no-reply@mhacks.org>", // sender address
+        //replyTo: "hackathon@umich.edu",
         to: user.name+" <"+user.email+">", // list of receivers
-        subject: "Welcome To MHacks", // Subject line
+        subject: "Welcome To mHacks!", // Subject line
         html: html, // html body
         generateTextFromHTML: true
     }

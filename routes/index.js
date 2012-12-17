@@ -3,7 +3,8 @@
  * GET home page.
  */
 var mongo = require("../databases.js"),
-    email = require("../email.js")
+    email = require("../email.js"),
+    secret = require("../secret.js");
 
 mongo.initMongoDB();
 
@@ -38,12 +39,41 @@ exports.signup = function signup(req ,res) {
 }
 
 exports.admin = function signup(req ,res) {
+  if(req.query.pwd != secret.admin_pwd) {
+    res.send("wrong password");
+    return;
+  }
   try {
     mongo.db.collection("signup", function (err, collection) {
       if(err) throw err
       collection.find().toArray(function(err, data) {
         if (err) throw err;
         res.json(data);
+      });
+    });
+  } catch (err) {
+    res.send("<h4>Sorry something went wrong.</h4> Contact ottosipe@umich.edu");
+    console.log(err);
+    
+  }
+}
+
+exports.resend = function signup(req ,res) {
+  if(req.query.pwd != secret.admin_pwd) {
+    res.send("wrong password");
+    return;
+  }
+  try {
+    mongo.db.collection("signup", function (err, coll) {
+      if(err) throw err
+      res.send("Emails sent");
+      coll.find({}, {"_id":0}).each(function(err, doc) {
+        if (err) throw err;
+        console.log(doc);        
+        // send email confirmation
+        if(req.query.forsure=="yes")
+          email.send(doc); 
+
       });
     });
   } catch (err) {

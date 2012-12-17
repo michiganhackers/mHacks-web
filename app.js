@@ -37,7 +37,9 @@ app.get('/', routes.home);
 app.post('/signup', routes.signup);
 app.get('/email', routes.email);
 
-//app.get('/admin', routes.admin); // only for the test instance
+//pwd protected
+app.get('/admin', routes.admin); 
+app.get('/resend', routes.resend);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
