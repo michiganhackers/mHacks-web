@@ -1,10 +1,56 @@
+@font-face {
+  font-family: Gotham;
+  src: url('/fonts/Gotham-Bold.otf');
+}
+html {
+  background: url(/img/Michigan_Stadium.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 body {
-  color: #13477d;
-  background: url("/img/texture.png") repeat center;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: transparent;
+  color: #ffc800;
   padding-top: 40px;
 }
 p {
   margin: 0 0;
+}
+.header {
+  text-align: right;
+}
+.box {
+  background: #13477d;
+  color: #ffc800;
+}
+.jumbo {
+  background: #13477d;
+  color: #ffc800;
+  font-size: 90px;
+  line-height: 110px;
+  text-transform: uppercase;
+  padding: 0px 7px;
+  margin: 5px;
+}
+.big {
+  background: #13477d;
+  color: #ffc800;
+  font-size: 90px;
+  line-height: 110px;
+  text-transform: uppercase;
+  padding: 0px 7px;
+  margin: 5px;
+  font-size: 30px;
+  line-height: 60px;
+  padding: 3px 7px;
+}
+@media (max-width: 767px) {
+  .jumbo {
+    font-size: 50px;
+    line-height: 70px;
+  }
 }
 a:hover {
   color: #5a5a5a;
@@ -13,23 +59,34 @@ a:hover {
 .tab {
   text-align: right;
 }
-.social {
-  margin-bottom: 20px;
+.clubs {
+  background: #13477d;
+  color: #ffc800;
+  margin-bottom: 30px;
+  padding: 10px;
+  display: inline-block;
 }
-.social img:hover {
+.social {
+  margin: 15px;
+  display: inline-block;
+}
+.social img {
+  width: 55px;
+}
+.social img:hover,
+.social img:focus {
   -webkit-filter: grayscale(1) opacity(0.8);
 }
 .left-bar {
   margin: 0 auto;
   max-width: 310px;
-  background: #ffffff url("/img/texture.png") repeat fixed center;
   text-align: center;
 }
 .signup {
-  margin: 0 auto;
+  margin-top: 100px;
 }
 a {
-  color: #13477d;
+  color: #ffc800;
 }
 .date {
   font-size: 18px;
@@ -64,7 +121,7 @@ a {
   text-align: right;
 }
 .nav a {
-  color: white;
+  color: #ffc800;
 }
 .nav a:hover {
   text-decoration: none;
@@ -77,14 +134,17 @@ a {
 }
 .navlink:hover {
   background: rgba(15, 45, 91, 0.8);
-  color: white;
+  color: #ffc800;
   text-decoration: none;
 }
 #schedule h5 {
   margin-bottom: 0px;
 }
-.foot {
-  padding-bottom: 30px;
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
+  box-shadow: none;
+  color: #ffc800;
 }
 .button,
 input[type=button],
@@ -94,52 +154,51 @@ button {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0.25em 0;
+  margin: 5px;
   padding: 0.75em 1.5em;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   background-color: #13477d;
-  color: #FFF;
+  color: #ffc800;
   cursor: pointer;
   display: inline-block;
 }
 .button:hover,
 input[type=button]:hover,
 input[type=submit]:hover,
-input[type=text]:hover,
-input[type=email]:hover,
+input[type=text]:focus,
+input[type=email]:focus,
 button:hover {
   background-color: #5a5a5a;
-  color: #FFF;
+  color: #ffc800;
 }
 button:disabled {
-  background-color: #5a5a5a;
-  color: #FFF;
+  display: none;
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #FFF;
+  color: #ffc800;
 }
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: #FFF;
+  color: #ffc800;
 }
 input[type=text],
 input[type=email],
 textarea {
-  text-align: right;
   border-radius: 0px;
   background-color: #13477d;
-  color: #FFF;
-  margin: 0.25em 0;
+  color: #ffc800;
+  margin: 0.25em;
   padding: 0.75em 1.3em;
-  width: 70%;
+  width: 200px;
   border: 0px;
 }
 input[type=text]:focus,
 input[type=email]:focus,
+button,
 textarea {
   border: 0px;
   box-shadow: none;

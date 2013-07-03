@@ -1,16 +1,71 @@
 @gray: rgb(90,90,90);
 @hover: rgba(15,45,91,.8);
-@blue: rgb(19,71,125);
+@color1: #FFC800;
+@color2: rgb(19,71,125);
+
 @grayTrans: rgba(90,90,90,.5);
 
+@font-face {
+	font-family: Gotham;
+	src: url('/fonts/Gotham-Bold.otf');
+}
+
+html {
+	  background: url(/img/Michigan_Stadium.jpg) no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+
 body {
-	color:@blue;	
-	background: url("/img/texture.png") repeat center;
+	font-family: Gotham, "Helvetica Neue",Helvetica,Arial,sans-serif;
+	
+	background: transparent;
+	color:@color1;
 	padding-top: 40px;
 }
 
 p {
 	margin: 0 0;
+}
+
+.container {
+
+}
+
+.header {
+	text-align: right;
+}
+
+.box {
+	background: @color2;
+	color: @color1;
+}
+
+.jumbo {
+	.box;
+	font-size: 90px;
+	line-height: 110px;
+	text-transform: uppercase;
+	padding: 0px 7px;
+	margin: 5px;
+}
+
+.big {
+	.jumbo;
+	font-size: 30px;
+	line-height: 60px;
+	padding: 3px 7px;
+}
+
+
+@media (max-width: 767px) { 
+
+	.jumbo {
+		font-size: 50px;
+		line-height: 70px;
+	}
 }
 
 a:hover {
@@ -21,27 +76,40 @@ a:hover {
 	text-align:right;
 }
 
-.social {
-	margin-bottom: 20px;
+.clubs {
+	.box;
+	margin-bottom: 30px;
+	padding: 10px;
+	display: inline-block;
+
 }
 
-.social img:hover{
+.social {
+	margin: 15px;
+	display: inline-block;
+}
+
+.social img {
+	width: 55px;
+}
+
+.social img:hover,
+.social img:focus{
 	-webkit-filter: grayscale(1) opacity(.8)
 }
 
 .left-bar {
 	margin:0 auto;
 	max-width:310px;
-	background: white url("/img/texture.png") repeat fixed center;
 	text-align: center;
 }
 
 .signup {
-	margin: 0 auto;
+	margin-top: 100px;
 }
 
 a {
-	color:@blue;
+	color:@color1;
 }
 
 .date {
@@ -86,7 +154,7 @@ a {
 }
 
 .nav a {
-	color: white;
+	color: @color1;
 }
 
 .nav a:hover {
@@ -102,7 +170,7 @@ a {
 
 .navlink:hover {
 	background: @hover;
-	color:white;
+	color: @color1;
 	text-decoration: none;
 }
 
@@ -111,9 +179,15 @@ a {
 }
 
 
-.foot {
-	padding-bottom: 30px;
+
+// fix red on bad email
+input:focus:invalid:focus, 
+textarea:focus:invalid:focus, 
+select:focus:invalid:focus {
+	box-shadow: none;
+	color: @color1;
 }
+
 .button, 
 input[type=button], 
 input[type=submit], 
@@ -122,14 +196,14 @@ button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0.25em 0;
+    margin: 5px;
     padding: 0.75em 1.5em;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
-    background-color: @blue;
-    color:#FFF;
+    background-color: @color2;
+    color:@color1;
     cursor: pointer;
     display: inline-block;
 }
@@ -137,41 +211,42 @@ button {
 .button:hover, 
 input[type=button]:hover, 
 input[type=submit]:hover,
-input[type=text]:hover,
-input[type=email]:hover, 
+input[type=text]:focus,
+input[type=email]:focus, 
 button:hover {
     background-color: @gray;
-    color:#FFF; 
+    color:@color1; 
 }
 
 button:disabled {
-    background-color: @gray;
-    color:#FFF; 
+    //background-color: @gray;
+    //color:@color1; 
+    display: none;
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #FFF;
+  color: @color1;
 }
 
 input:-moz-placeholder, textarea:-moz-placeholder {
-  color: #FFF;
+  color: @color1;
 }
 
 input[type=text],
 input[type=email],
 textarea {
-	text-align: right;
 	border-radius: 0px;
-	background-color: @blue;
-	color:#FFF;
-    margin: 0.25em 0;
+	background-color: @color2;
+	color:@color1;
+    margin: 0.25em;
     padding: 0.75em 1.3em;
-    width: 70%;
+    width: 200px;
     border:0px;
 }
 
 input[type=text]:focus,
 input[type=email]:focus,
+button,
 textarea {
     border:0px;
     box-shadow: none;

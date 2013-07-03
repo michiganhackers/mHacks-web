@@ -1,16 +1,29 @@
 $(document).ready(function(){ 
 
-	$(".email").change(function(event){
+	$(".email").on("keyup", function(event){
+
+		// TODO, make this take .edu only?
+		var email_reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$/;
 		
-		if($(this).val().indexOf("@") == -1 || $(this).val().indexOf(".") == -1){
-			$(this).tooltip({title:"invalid email", placement:"top",trigger:"manual"}).tooltip('show');
+		window.valid_email = email_reg.test($(this).val())//$(this).val().indexOf("@") == -1 || $(this).val().indexOf(".") == -1;
+		console.log(valid_email)
+		if(!valid_email){
 			$(".signup button").attr("disabled","true");
 		} else {
 			$(".signup button").removeAttr("disabled");
 			$(this).tooltip('hide');
 		}
 		
-	})
+	}).change(function() {
+		if(!valid_email && $(this).val() != "") {
+			$(this).tooltip({
+				title: 		"invalid email", 
+				placement: 	"top",
+				trigger: 	"manual"
+			}).tooltip('show');
+		}
+	});
+
 	$(".signup").submit(function(event){
 		event.preventDefault();
 
@@ -33,7 +46,7 @@ $(document).ready(function(){
 
 
 	// animate ticker
-	tick();
+	//tick();
 
 });
 

@@ -1,6 +1,5 @@
-doctype 5
+!!! 5
 html(xmlns='http://www.w3.org/1999/xhtml', xmlns:og='http://ogp.me/ns#', xmlns:fb='https://www.facebook.com/2008/fbml')
-
 
 	head
 		title MHacks
@@ -9,14 +8,14 @@ html(xmlns='http://www.w3.org/1999/xhtml', xmlns:og='http://ogp.me/ns#', xmlns:f
 		meta(property='og:title', content='MHacks')
 		meta(property='og:url', content='http://mhacks.org')
 		meta(property='og:image', content='http://mhacks.org/img/logo_sq.png')
-		meta(property='og:description', content='Get ready for the biggest hackathon the midwest has ever seen.')
+		meta(property='og:description', content='MHacks - the biggest college hackathon ever.')
 
-		link(rel='stylesheet', href='/css/bootstrap.min.css')
-		link(rel='stylesheet', href='/css/bootstrap-responsive.min.css')
+		link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css')
+		link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.min.css')
 		link(rel='stylesheet', href='/css/style.css')
 
-		script(src="/js/jquery.min.js")
-		script(src="/js/bootstrap.min.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js")
 		script(src="/js/main.js")
 		script(src="/js/holder.js")
 		
@@ -33,25 +32,41 @@ html(xmlns='http://www.w3.org/1999/xhtml', xmlns:og='http://ogp.me/ns#', xmlns:f
 
 	body
 		.container
-			.span4
-				.left-bar
-					a.logo(href="/")
-						img(src="img/logo.png")
-					h2 mhacks
-					h4 feb. 1-3, 2013 - ann arbor
-					hr
-					.hidden-phone
-						include signup
-						hr
+			.header
+				span.jumbo Big House.
+				br
+				span.jumbo Big Data.
+			
+			include signup
+			
 
-					.social
-						a(href="http://facebook.com/MHacksHackathon", target="_blank") 
-							img(src="/img/facebook.png")  
-						a(href="http://twitter.com/mgohack", target="_blank")
-							img(src="/img/twitter.png")
+			.foot.pull-right
+				.social
+					a(href="http://facebook.com/MHacksHackathon", target="_blank") 
+						img(src="/img/facebook.png")
+					a(href="http://twitter.com/mhacks", target="_blank")
+						img(src="/img/twitter.png")
+				.clubs
+					a(href="http://www.michiganhackers.org") michigan hackers
+					|  + 
+					a(href="http://mpowered.umich.edu/") mpowered
+
+			//-.left-bar
+				a.logo(href="/")
+					img(src="img/logo.png")
+				h2 mhacks
+				h4 sept. 20-22, 2013 - ann arbor
+				
+				include signup
+				
+				.social
+					a(href="http://facebook.com/MHacksHackathon", target="_blank") 
+						img(src="/img/facebook.png")
+					a(href="http://twitter.com/mhacks", target="_blank")
+						img(src="/img/twitter.png")
 
 						
-			.span7.about
+			//-.span7.about
 				.nav.row-fluid 
 					a.navlink.pull-left.visible-desktop(href="#home") mhacks
 					a.navlink(href="#info") info
