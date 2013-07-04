@@ -27,7 +27,7 @@ exports.signup = function signup(req ,res) {
         res.send("<span class='big'> Thanks! </span><br/><span class='big'> Updates soon...</span>");
         
         // send email confirmation
-        //email.send(req.body); 
+        email.send(req.body); 
 
       });
     });

@@ -1,28 +1,39 @@
 $(document).ready(function(){ 
 
-	$(".email").on("keyup", function(event){
+	// fade in content
+
+	animate($(".container"), "fadeInUp");
+	//animate($(".signup"), "fadeInLeftBig");
+	//animate($(".foot"), "fadeInUpBig");
+
+	function check_email(event){
 
 		// TODO, make this take .edu only?
 		var email_reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$/;
 		
-		window.valid_email = email_reg.test($(this).val())//$(this).val().indexOf("@") == -1 || $(this).val().indexOf(".") == -1;
-		console.log(valid_email)
+		window.valid_email = email_reg.test($(this).val())
+		console.log(valid_email, $(this).val())
 		if(!valid_email){
 			$(".signup button").attr("disabled","true");
 		} else {
 			$(".signup button").removeAttr("disabled");
 			$(this).tooltip('hide');
 		}
-		
-	}).change(function() {
-		if(!valid_email && $(this).val() != "") {
-			$(this).tooltip({
-				title: 		"invalid email", 
-				placement: 	"top",
-				trigger: 	"manual"
-			}).tooltip('show');
-		}
-	});
+	}
+
+	$(".email")
+		.on("keyup", check_email)
+		.on("blur", check_email)
+		.change(function() {
+			check_email();
+			if(!valid_email && $(this).val() != "") {
+				$(this).tooltip({
+					title: 		"invalid email", 
+					placement: 	"top",
+					trigger: 	"manual"
+				}).tooltip('show');
+			}
+		});
 
 	$(".signup").submit(function(event){
 		event.preventDefault();
@@ -57,3 +68,9 @@ function tick() {
 	});
 };
 
+function animate($sel, name) {
+	$sel.addClass("animated " + name);
+	setTimeout(function(){
+		$sel.removeClass(name);
+	}, 1000);
+}
