@@ -58,10 +58,9 @@ $(document).ready(function(){
 	$(".signup").submit(function(event){
 		event.preventDefault();
 
-		console.log("POST DONE")
-		/*$.post('/signup', $(this).serialize(), function(data) {
+		$.post('/signup', $(this).serialize(), function(data) {
 			$('.signup').html(data);
-		});*/
+		});
 
 	});
 

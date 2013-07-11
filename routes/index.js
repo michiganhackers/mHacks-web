@@ -42,7 +42,7 @@ exports.admin = function signup(req ,res) {
   try {
     mongo.db.collection(secret.db_name, function (err, collection) {
       if(err) throw err
-      collection.find().toArray(function(err, data) {
+      collection.find({}, { _id: 0 }).toArray(function(err, data) {
         if (err) throw err;
         res.json(data);
       });
