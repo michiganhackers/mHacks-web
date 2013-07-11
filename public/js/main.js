@@ -10,14 +10,22 @@ $(document).ready(function(){
 
 		// TODO, make this take .edu only?
 		var email_reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$/;
-		
-		window.valid_email = email_reg.test($(this).val())
-		console.log(valid_email, $(this).val())
+		var edu_reg = /.edu/;
+
+		var value = $(".email").val();
+		window.edu_email = edu_reg.test(value);
+		window.valid_email = email_reg.test(value);
+
 		if(!valid_email){
 			$(".signup button").attr("disabled","true");
 		} else {
-			$(".signup button").removeAttr("disabled");
-			$(this).tooltip('hide');
+			if($(".name").val()) {
+				$(".signup button").removeAttr("disabled");	
+			} 
+			if(edu_email) {
+				$(".email").tooltip('destroy');
+				$(".school").attr("type","hidden");
+			}
 		}
 	}
 
@@ -26,9 +34,21 @@ $(document).ready(function(){
 		.on("blur", check_email)
 		.change(function() {
 			check_email();
-			if(!valid_email && $(this).val() != "") {
+			if($(this).val() == "") return;
+			
+			if(!valid_email) {
+				$(".email").tooltip('destroy');
 				$(this).tooltip({
-					title: 		"invalid email", 
+					title: 		"Invalid Email", 
+					placement: 	"top",
+					trigger: 	"manual"
+				}).tooltip('show');
+			} else if (!edu_email) {
+				$(".email").tooltip('destroy');
+
+				$(".school").attr("type","text");
+				$(this).tooltip({
+					title: 		"No .edu email? What school then?", 
 					placement: 	"top",
 					trigger: 	"manual"
 				}).tooltip('show');
@@ -38,9 +58,10 @@ $(document).ready(function(){
 	$(".signup").submit(function(event){
 		event.preventDefault();
 
-		$.post('/signup', $(this).serialize(), function(data) {
+		console.log("POST DONE")
+		/*$.post('/signup', $(this).serialize(), function(data) {
 			$('.signup').html(data);
-		});
+		});*/
 
 	});
 

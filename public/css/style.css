@@ -12,7 +12,7 @@ html {
 body {
   font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: transparent;
-  color: #ffc800;
+  color: #e79f0f;
 }
 p {
   margin: 0 0;
@@ -29,14 +29,15 @@ section {
 .header {
   padding-top: 60px;
   text-align: right;
+  padding-bottom: 80px;
 }
 .box {
   background: #13477d;
-  color: #ffc800;
+  color: #e79f0f;
 }
 .jumbo {
   background: #13477d;
-  color: #ffc800;
+  color: #e79f0f;
   font-size: 100px;
   line-height: 130px;
   text-transform: uppercase;
@@ -46,7 +47,7 @@ section {
 }
 .big {
   background: #13477d;
-  color: #ffc800;
+  color: #e79f0f;
   font-size: 100px;
   line-height: 130px;
   text-transform: uppercase;
@@ -83,7 +84,7 @@ section {
 }
 .clubs {
   background: #13477d;
-  color: #ffc800;
+  color: #e79f0f;
   margin-bottom: 30px;
   padding: 10px;
   display: inline-block;
@@ -101,7 +102,7 @@ section {
   -webkit-filter: grayscale(1) opacity(0.8);
 }
 a {
-  color: #ffc800;
+  color: #e79f0f;
 }
 a:hover {
   color: white;
@@ -151,7 +152,7 @@ button {
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   background-color: #13477d;
-  color: #ffc800;
+  color: #e79f0f;
   cursor: pointer;
   display: block;
 }
@@ -179,7 +180,7 @@ input[type=email],
 textarea {
   border-radius: 0px;
   background-color: #13477d;
-  color: #ffc800;
+  color: #e79f0f;
   width: 200px;
   border: 0px;
 }
