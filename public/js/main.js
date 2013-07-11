@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	// fade in content
 
-	animate($(".container"), "fadeInUp");
+	animate($("section"), "fadeInUp");
 	//animate($(".signup"), "fadeInLeftBig");
 	//animate($(".foot"), "fadeInUpBig");
 

@@ -24,7 +24,7 @@ exports.signup = function signup(req ,res) {
       collection.insert(req.body, function(err, collection) {
         if (err) throw err;
 
-        res.send("<span class='big'> Thanks! </span><br/><span class='big'> Updates soon...</span>");
+        res.send("<span class='big'> Thanks "+req.body.name+"! </span><br/><h4>We just sent a confirmation email to "+req.body.email+", updates will follow after that!</h4>");
         
         // send email confirmation
         email.send(req.body); 

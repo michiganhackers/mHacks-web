@@ -3,7 +3,7 @@
 @color1: #FFC800;
 @color2: rgb(19,71,125);
 
-@grayTrans: rgba(90,90,90,.5);
+@grayTrans: rgba(90,90,90,.8);
 
 @font-face {
 	font-family: Gotham;
@@ -20,21 +20,27 @@ html {
 
 body {
 	font-family: Gotham, "Helvetica Neue",Helvetica,Arial,sans-serif;
-	
 	background: transparent;
 	color:@color1;
-	padding-top: 40px;
 }
 
 p {
 	margin: 0 0;
 }
 
-.container {
+section {
+	padding-bottom: 10%;
+}
 
+.well {
+	background-color: @grayTrans;
+	border-radius: 0px;
+	border: none;
+	color: white;
 }
 
 .header {
+	padding-top: 60px;
 	text-align: right;
 }
 
@@ -45,33 +51,50 @@ p {
 
 .jumbo {
 	.box;
-	font-size: 90px;
-	line-height: 110px;
+	font-size: 100px;
+	line-height: 130px;
 	text-transform: uppercase;
-	padding: 0px 7px;
-	margin: 5px;
+	padding: 0px 10px;
+	margin: 5px 0px;
+	vertical-align: middle;
 }
 
 .big {
 	.jumbo;
 	font-size: 30px;
-	line-height: 60px;
-	padding: 3px 7px;
+	line-height: 50px;
+	padding: 3px 10px;
 }
 
 
-@media (max-width: 767px) { 
+@media (max-width: 979px) {
 
-	.jumbo {
-		font-size: 50px;
-		line-height: 70px;
+	.header { 
+		padding-top: 0px;
 	}
 }
 
-a:hover {
-	color: @gray;
-	text-decoration: none;
+@media (max-width: 767px) { 
+	.jumbo {
+		font-size: 65px;
+		line-height: 90px;
+	}
 }
+
+// phone only
+@media (max-width: 480px) { 
+
+	.jumbo {
+		font-size: 40px;
+		line-height: 55px;
+	}
+
+	.big {
+		font-size: 23px;
+		line-height: 40px;
+	}
+}
+
 .tab {
 	text-align:right;
 }
@@ -86,6 +109,7 @@ a:hover {
 
 .social {
 	margin: 15px;
+	margin-left: 0px;
 	display: inline-block;
 }
 
@@ -98,22 +122,12 @@ a:hover {
 	-webkit-filter: grayscale(1) opacity(.8)
 }
 
-.left-bar {
-	margin:0 auto;
-	max-width:310px;
-	text-align: center;
-}
-
-.signup {
-	margin-top: 100px;
-}
-
 a {
 	color:@color1;
 }
-
-.date {
-	font-size: 18px;
+a:hover {
+	color: white;
+	text-decoration: none;
 }
 
 .ticker {
@@ -132,51 +146,11 @@ a {
 	max-height: 100px;
 }
 
-////
-.main {
-	min-height: 381px;
-	overflow: auto;
-	padding: 0 15px;
-}
-
-.question {
-	cursor: pointer;
-}
-
-.logo img {
-	width: 80%;
-}
-
 .nav {
-	width:100%;
-	background-color: @grayTrans;
-	text-align: right;
+	//background-color: @grayTrans;
+	//text-align: right;
 }
 
-.nav a {
-	color: @color1;
-}
-
-.nav a:hover {
-	text-decoration: none;
-}
-
-.navlink {
-	font-size: 20px;
-	padding: 11px 15px 11px 15px;
-	display: inline-block;
-	cursor: pointer;
-}
-
-.navlink:hover {
-	background: @hover;
-	color: @color1;
-	text-decoration: none;
-}
-
-#schedule h5 {
-	margin-bottom: 0px;
-}
 
 
 input[type=button], 
@@ -185,8 +159,8 @@ input[type=text],
 input[type=email],
 .btn,
 button {
-	font-size: 18px;
-	line-height: 20px;
+	font-size: 20px;
+	line-height: 22px;
 	font-weight: bold;
     margin: 5px;
     padding: 10px 15px;
@@ -196,7 +170,7 @@ input:focus:invalid:focus,
 textarea:focus:invalid:focus, 
 select:focus:invalid:focus {
 	box-shadow: none;
-	color: @color1;
+	color: white;
 }
 
 .btn, 
@@ -212,7 +186,7 @@ button {
     -o-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
     background-color: @color2;
-    color:@color1;
+    color: @color1;
     cursor: pointer;
 	display: block;
 }
@@ -223,8 +197,7 @@ input[type=submit]:hover,
 input[type=text]:focus,
 input[type=email]:focus, 
 button:hover {
-    background-color: @gray;
-    color:@color1; 
+    color: white; 
 }
 
 button:disabled {
@@ -234,11 +207,11 @@ button:disabled {
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: @color1;
+  color: gray;
 }
 
 input:-moz-placeholder, textarea:-moz-placeholder {
-  color: @color1;
+  color: gray;
 }
 
 input[type=text],
@@ -246,7 +219,7 @@ input[type=email],
 textarea {
 	border-radius: 0px;
 	background-color: @color2;
-	color:@color1;
+	color: @color1;
 	width: 200px;
 	border: 0px;
 }

@@ -13,12 +13,21 @@ body {
   font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: transparent;
   color: #ffc800;
-  padding-top: 40px;
 }
 p {
   margin: 0 0;
 }
+section {
+  padding-bottom: 10%;
+}
+.well {
+  background-color: rgba(90, 90, 90, 0.8);
+  border-radius: 0px;
+  border: none;
+  color: white;
+}
 .header {
+  padding-top: 60px;
   text-align: right;
 }
 .box {
@@ -28,33 +37,46 @@ p {
 .jumbo {
   background: #13477d;
   color: #ffc800;
-  font-size: 90px;
-  line-height: 110px;
+  font-size: 100px;
+  line-height: 130px;
   text-transform: uppercase;
-  padding: 0px 7px;
-  margin: 5px;
+  padding: 0px 10px;
+  margin: 5px 0px;
+  vertical-align: middle;
 }
 .big {
   background: #13477d;
   color: #ffc800;
-  font-size: 90px;
-  line-height: 110px;
+  font-size: 100px;
+  line-height: 130px;
   text-transform: uppercase;
-  padding: 0px 7px;
-  margin: 5px;
+  padding: 0px 10px;
+  margin: 5px 0px;
+  vertical-align: middle;
   font-size: 30px;
-  line-height: 60px;
-  padding: 3px 7px;
+  line-height: 50px;
+  padding: 3px 10px;
+}
+@media (max-width: 979px) {
+  .header {
+    padding-top: 0px;
+  }
 }
 @media (max-width: 767px) {
   .jumbo {
-    font-size: 50px;
-    line-height: 70px;
+    font-size: 65px;
+    line-height: 90px;
   }
 }
-a:hover {
-  color: #5a5a5a;
-  text-decoration: none;
+@media (max-width: 480px) {
+  .jumbo {
+    font-size: 40px;
+    line-height: 55px;
+  }
+  .big {
+    font-size: 23px;
+    line-height: 40px;
+  }
 }
 .tab {
   text-align: right;
@@ -68,6 +90,7 @@ a:hover {
 }
 .social {
   margin: 15px;
+  margin-left: 0px;
   display: inline-block;
 }
 .social img {
@@ -77,19 +100,12 @@ a:hover {
 .social img:focus {
   -webkit-filter: grayscale(1) opacity(0.8);
 }
-.left-bar {
-  margin: 0 auto;
-  max-width: 310px;
-  text-align: center;
-}
-.signup {
-  margin-top: 100px;
-}
 a {
   color: #ffc800;
 }
-.date {
-  font-size: 18px;
+a:hover {
+  color: white;
+  text-decoration: none;
 }
 .ticker {
   white-space: nowrap;
@@ -104,50 +120,14 @@ a {
 .ticker img {
   max-height: 100px;
 }
-.main {
-  min-height: 381px;
-  overflow: auto;
-  padding: 0 15px;
-}
-.question {
-  cursor: pointer;
-}
-.logo img {
-  width: 80%;
-}
-.nav {
-  width: 100%;
-  background-color: rgba(90, 90, 90, 0.5);
-  text-align: right;
-}
-.nav a {
-  color: #ffc800;
-}
-.nav a:hover {
-  text-decoration: none;
-}
-.navlink {
-  font-size: 20px;
-  padding: 11px 15px 11px 15px;
-  display: inline-block;
-  cursor: pointer;
-}
-.navlink:hover {
-  background: rgba(15, 45, 91, 0.8);
-  color: #ffc800;
-  text-decoration: none;
-}
-#schedule h5 {
-  margin-bottom: 0px;
-}
 input[type=button],
 input[type=submit],
 input[type=text],
 input[type=email],
 .btn,
 button {
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 20px;
+  line-height: 22px;
   font-weight: bold;
   margin: 5px;
   padding: 10px 15px;
@@ -156,7 +136,7 @@ input:focus:invalid:focus,
 textarea:focus:invalid:focus,
 select:focus:invalid:focus {
   box-shadow: none;
-  color: #ffc800;
+  color: white;
 }
 .btn,
 input[type=button],
@@ -181,19 +161,18 @@ input[type=submit]:hover,
 input[type=text]:focus,
 input[type=email]:focus,
 button:hover {
-  background-color: #5a5a5a;
-  color: #ffc800;
+  color: white;
 }
 button:disabled {
   display: none;
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #ffc800;
+  color: gray;
 }
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: #ffc800;
+  color: gray;
 }
 input[type=text],
 input[type=email],

@@ -31,25 +31,64 @@ html(xmlns='http://www.w3.org/1999/xhtml', xmlns:og='http://ogp.me/ns#', xmlns:f
 
 
 	body
-		.container
-			.header
-				span.jumbo Big House.
-				br
-				span.jumbo Big Data.
-			
-			include signup
-			
+		.navbar.navbar-inverse.navbar-fixed-top
+			.navbar-inner
+				.container
+					button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.brand(href='#home') MHacks Fall '13
+					.nav-collapse.collapse
+						ul.nav
+							
+							li
+								a(href='#info') Info
+							li
+								a(href='#signup') Signup
+							li
+								a(href='#sponsors') Sponsors
+							li
+								a(href='#schedule') Schedule
+							li
+								a(href='#faq') FAQ
 
-			.foot.pull-right
+		.container.main
+			
+			section#home
+				.header
+					span.jumbo Big House.
+					br
+					span.jumbo Big Data.
+			
+			section#info
+				span.jumbo mhacks.
+				br
+				span.big sept 20-22
+				.well
+					h3 The largest student-run 
+						em hackathon
+						|  meets the college's best 
+						em stadium
+						| !
+					h4 MHacks is known for top-notch hacks, awesome food, and amazing prizes.
+					h4 Totally Free - We'll do our best to get you to the Big House!
+			section#signup
+				include signup
+		
+			.foot
 				.social
 					a(href="http://facebook.com/MHacksHackathon", target="_blank") 
 						img(src="/img/facebook.png")
 					a(href="http://twitter.com/mhacks", target="_blank")
 						img(src="/img/twitter.png")
+				
 				.clubs
-					a(href="http://www.michiganhackers.org") michigan hackers
+					a(href="http://www.michiganhackers.org") Michigan Hackers
 					|  + 
-					a(href="http://mpowered.umich.edu/") mpowered
+					a(href="http://mpowered.umich.edu/") MPowered
+
+				
 
 			//-.left-bar
 				a.logo(href="/")
