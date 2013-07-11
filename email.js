@@ -19,10 +19,10 @@ exports.send = function(user) {
     });
 
     var opts = {
-        from: "mHacks <no-reply@mhacks.org>", // sender address
+        from: "MHacks <no-reply@mhacks.org>", // sender address
         //replyTo: "hackathon@umich.edu",
         to: user.name+" <"+user.email+">", // list of receivers
-        subject: "Welcome To mHacks!", // Subject line
+        subject: "Welcome To MHacks!", // Subject line
         html: html, // html body
         generateTextFromHTML: true
     }
