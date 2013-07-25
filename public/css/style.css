@@ -12,13 +12,16 @@ html {
 body {
   font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: transparent;
-  color: #e79f0f;
+  color: #ffc730;
 }
 p {
   margin: 0 0;
 }
 section {
   padding-bottom: 10%;
+}
+.main {
+  margin-top: 20px;
 }
 .well {
   background-color: rgba(90, 90, 90, 0.8);
@@ -32,12 +35,12 @@ section {
   padding-bottom: 80px;
 }
 .box {
-  background: #13477d;
-  color: #e79f0f;
+  background: #002e62;
+  color: #ffc730;
 }
 .jumbo {
-  background: #13477d;
-  color: #e79f0f;
+  background: #002e62;
+  color: #ffc730;
   font-size: 100px;
   line-height: 130px;
   text-transform: uppercase;
@@ -46,8 +49,8 @@ section {
   vertical-align: middle;
 }
 .big {
-  background: #13477d;
-  color: #e79f0f;
+  background: #002e62;
+  color: #ffc730;
   font-size: 100px;
   line-height: 130px;
   text-transform: uppercase;
@@ -83,8 +86,8 @@ section {
   text-align: right;
 }
 .clubs {
-  background: #13477d;
-  color: #e79f0f;
+  background: #002e62;
+  color: #ffc730;
   margin-bottom: 30px;
   padding: 10px;
   display: inline-block;
@@ -102,7 +105,7 @@ section {
   -webkit-filter: grayscale(1) opacity(0.8);
 }
 a {
-  color: #e79f0f;
+  color: #ffc730;
 }
 a:hover {
   color: white;
@@ -151,8 +154,8 @@ button {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  background-color: #13477d;
-  color: #e79f0f;
+  background-color: #002e62;
+  color: #ffc730;
   cursor: pointer;
   display: block;
 }
@@ -179,8 +182,8 @@ input[type=text],
 input[type=email],
 textarea {
   border-radius: 0px;
-  background-color: #13477d;
-  color: #e79f0f;
+  background-color: #002e62;
+  color: #ffc730;
   width: 200px;
   border: 0px;
 }

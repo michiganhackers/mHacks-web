@@ -75,7 +75,6 @@ $(document).ready(function(){
 		$(this).next(".ans").show();
 	});
 
-
 	// animate ticker
 	//tick();
 

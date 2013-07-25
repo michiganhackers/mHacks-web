@@ -1,4 +1,4 @@
 mhacks-web
 ==========
 
-Teaser website for mHacks.
+Website for mHacks, nothing fancy here.
