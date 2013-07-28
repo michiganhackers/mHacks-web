@@ -1,10 +1,13 @@
 
-span.big Sign Up:
-form.signup.well
+form.signup
 
 	h4 All students are welcome, as long as you're ready to hack!
-	input.name(type="text", name="name", placeholder="Name")
-	input.email(type="email", name="email", placeholder="email@university.edu")
+	input.name(type="text", name="name", placeholder="Name", required)
+	input(type="text", name="github", placeholder="@GitHub", required)
+	br
+	input.email(type="email", name="email", placeholder="email@university.edu", required)
 	input.school(type="hidden", name="school", placeholder="School")
-
+	input(type="text", name="grad_year", placeholder="Grad Year")
+	br
+	input(type="text", name="food", placeholder="Favorite Food", required)
 	button(type="submit", disabled="true") I'll Be There

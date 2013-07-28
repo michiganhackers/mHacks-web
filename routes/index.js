@@ -32,7 +32,7 @@ exports.signup = function signup(req ,res) {
       });
     });
   } catch (err) {
-    res.send("<span class='big'> Sorry something went wrong. Contact hackathon@umich.edu. </span> ");
+    res.send("Sorry something went wrong. Contact hackathon@umich.edu.");
     console.log(err);
     
   }
