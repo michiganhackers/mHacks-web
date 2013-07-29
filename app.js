@@ -37,6 +37,9 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+app.get("/", function(req, res) {
+  res.send("big things happening. please standby :)")
+})
 app.get('/secret', routes.home);
 app.post('/signup', routes.signup);
 app.get('/email', routes.email);
