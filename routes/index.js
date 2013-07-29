@@ -18,24 +18,27 @@ exports.email = function(req, res) {
 };
 
 exports.signup = function signup(req ,res) {
-  try {
+
+
     mongo.db.collection(secret.db_name, function (err, collection) {
-      if(err) throw err
-      collection.insert(req.body, function(err, collection) {
-        if (err) throw err;
+      collection.insert(req.body, {safe: true}, function(err, data) {
+        try {
 
-        res.send("<span class='big'> Thanks "+req.body.name+"! </span><br/><h4>We just sent a confirmation email to "+req.body.email+", updates will follow after that!</h4>");
+          if (err) throw err;
+          res.send("<span class='big'> Thanks "+req.body.name+"! </span><br/><h4>We just sent a confirmation email to "+req.body.email+", updates will follow after that!</h4>");
+          
+          // send email confirmation
+          email.send(req.body);  
+
+        } catch (err) {
+          res.send("Sorry something went wrong. Did you already sign up? Contact hackathon@umich.edu if you didn't already sign up!");
+          console.log(err);
+        }
         
-        // send email confirmation
-        email.send(req.body); 
-
       });
     });
-  } catch (err) {
-    res.send("Sorry something went wrong. Contact hackathon@umich.edu.");
-    console.log(err);
-    
-  }
+
+
 }
 
 exports.admin = function signup(req ,res) {

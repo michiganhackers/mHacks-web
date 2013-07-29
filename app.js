@@ -37,7 +37,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.home);
+app.get('/secret', routes.home);
 app.post('/signup', routes.signup);
 app.get('/email', routes.email);
 
