@@ -1,4 +1,20 @@
 !!! 5
+
+//
+
+	\    $$\ $$\   $$\  $$$$$$\   $$$$$$\  $$\   $$\  $$$$$$\  
+	$$$\    $$$ |$$ |  $$ |$$  __$$\ $$  __$$\ $$ | $$  |$$  __$$\ 
+	$$$$\  $$$$ |$$ |  $$ |$$ /  $$ |$$ /  \__|$$ |$$  / $$ /  \__|
+	$$\$$\$$ $$ |$$$$$$$$ |$$$$$$$$ |$$ |      $$$$$  /  \$$$$$$\  
+	$$ \$$$  $$ |$$  __$$ |$$  __$$ |$$ |      $$  $$<    \____$$\ 
+	$$ |\$  /$$ |$$ |  $$ |$$ |  $$ |$$ |  $$\ $$ |\$$\  $$\   $$ |
+	$$ | \_/ $$ |$$ |  $$ |$$ |  $$ |\$$$$$$  |$$ | \$$\ \$$$$$$  |
+	\__|     \__|\__|  \__|\__|  \__| \______/ \__|  \__| \______/ 
+
+
+                                                                  
+
+
 html(xmlns='http://www.w3.org/1999/xhtml', xmlns:og='http://ogp.me/ns#', xmlns:fb='https://www.facebook.com/2008/fbml')
 
 	head
@@ -16,8 +32,8 @@ html(xmlns='http://www.w3.org/1999/xhtml', xmlns:og='http://ogp.me/ns#', xmlns:f
 
 		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js")
 		script(src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js")
+		//-script(src="/js/sticky.js")
 		script(src="/js/main.js")
-		script(src="/js/holder.js")
 		
 		script(type='text/javascript')
 			var _gaq = _gaq || [];
@@ -29,26 +45,16 @@ html(xmlns='http://www.w3.org/1999/xhtml', xmlns:og='http://ogp.me/ns#', xmlns:f
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
 
-
-	body(data-spy="scroll", data-target=".navbar", data-offset="100")
-		.navbar.navbar-inverse.navbar-fixed-top
+	//-(data-spy="scroll", data-target=".navbar", data-offset="100")
+	body.stadium
+		//-.navbar.navbar-inverse
 			.navbar-inner
 				.container.nav-cont
 					button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
 						span.icon-bar
 						span.icon-bar
 						span.icon-bar
-					a.brand(href='#home')
-						h4.numbers.hidden-phone
-							span.big 1000+
-							|  hackers 
-							span.big 36
-							|  hours 
-							span.big $20000
-							|  in prizes 
-							span.big 1
-							|  big house.
-						h1.visible-phone MHacks
+					a.brand(href='#home'): img(src="img/logo.png")
 					.nav-collapse.collapse
 						ul.nav.pull-right
 							li
@@ -61,25 +67,56 @@ html(xmlns='http://www.w3.org/1999/xhtml', xmlns:og='http://ogp.me/ns#', xmlns:f
 								a(href='#faq') FAQ
 							li
 								a(href='#sponsors') Sponsors
-
-		.container.main
+		
 			
-			section#home
-				.header
-					span.jumbo MHacks.
+		.main
+				
+			section#home.stadium2
+				.container
+					.header
+						img.logo(src="/img/logo.png")
+			
+			section#numbers.none
+				.container
+					h4.numbers
+						span.big 1000+
+						|  hackers 
+						span.big 36
+						|  hours 
+						span.big $20,000
+						|  in prizes 
+						span.big 1
+						|  big house.
 
 			section#info
+				.container
+					span.big MHacks at the
+					br
+					span.jumbo Big House.
+					br
+					span.big sept 20-22
+					
+				
 
-				span.jumbo Big House.
-				br
-				span.big sept 20-22
-				.well
+			section#tagline.none
+				.container
+					.numbers
+						h3 The best student 
+							span.big hackathon
+							|  meets the biggest 
+							span.big stadium
 
-					h3 The best student 
-						em hackathon
-						|  meets the biggest 
-						em stadium
-						| !
+			section#signup.palmer
+				.container
+					span.big Sign Up:
+					.well
+						.row-fluid
+							.span7
+								include signup
+							.span5 // fb like thing here
+			
+			section#bullets.none
+				.container
 					ul
 						li
 							h4 You'll have a chance to hack while overlooking the field of Michigan Stadium.
@@ -88,47 +125,38 @@ html(xmlns='http://www.w3.org/1999/xhtml', xmlns:og='http://ogp.me/ns#', xmlns:f
 						li
 							h4 It's totally free - we'll do our best to get you to the Big House and provide a great experience!
 			
-			//-section#numbers
-				.well		
-					h4.numbers
-						span.big 1000+
-						|  hackers 
-						span.big 36
-						|  hours 
-						span.big $20000
-						|  in prizes 
-						span.big 1
-						|  big house.
-
-
-			section#signup
-				span.big Sign Up:
-				.well
-					.row-fluid
-						.span7
-							include signup
-						.span5
-							iframe(width="100%", height="250px", src="//www.youtube.com/embed/D6_bF3dFEAI?controls=0&modestbranding&showinfo=0", frameborder="0", allowfullscreen)
 			section#sponsors
-				span.big sponsors
-				.well
-					h3 Sponsors are what make a hackathon go!
-					h4 Last year we had over 30 sponsors ranging from large corporations to small startups.
-					h4 Do you want to have your company involved at MHacks? 
-						a(href="mailto:MHacksSponsorship@umich.edu?subject=MHacks Sponsorship") Contact us!
+				.container
+					span.big sponsors
+					.well
+						h3 Sponsors are what make a hackathon go!
+						h4 Last year we had over 30 sponsors ranging from large corporations to small startups.
+						h4 Do you want to have your company involved at MHacks? 
+							a(href="mailto:MHacksSponsorship@umich.edu?subject=MHacks Sponsorship") Contact us!
+						br
+						.sponsors
+							img(src="/img/sponsors.png")
 
-			section#schedule
-			section#faq
+			//section#schedule.stadium
+				.container
 
-			.foot
-				.social
-					a(href="http://facebook.com/MHacksHackathon", target="_blank") 
-						img(src="/img/facebook.png")
-					a(href="http://twitter.com/mhacks", target="_blank")
-						img(src="/img/twitter.png")
-				
-				.clubs
-					a(href="http://www.michiganhackers.org") Michigan Hackers
-					|  + 
-					a(href="http://mpowered.umich.edu/") MPowered
+			//section#faq.stadium
+				.container
 
+			section#foot.none
+				.container		
+					.foot
+						.social
+							a(href="http://facebook.com/MHacksHackathon", target="_blank") 
+								img(src="/img/facebook.png")
+							a(href="http://twitter.com/mhacks", target="_blank")
+								img(src="/img/twitter.png")
+						
+						.clubs
+							a(href="http://www.michiganhackers.org") Michigan Hackers
+							|  + 
+							a(href="http://mpowered.umich.edu/") MPowered
+
+		.video(style="position: fixed; top: 0; z-index: -99; width: 100%; height: 100%")
+			//-iframe(width="100%", height="100%", src="//www.youtube.com/embed/rcatzGEG3ro?autoplay=1&controls=0&showinfo=0&autohide=1&wmode=opaque&loop=1", frameborder="0")
+			

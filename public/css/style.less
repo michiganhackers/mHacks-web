@@ -10,12 +10,35 @@
 	src: url('/fonts/Gotham-Bold.otf');
 }
 
-html {
-	  background: url(/img/Michigan_Stadium.jpg) no-repeat center center fixed; 
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
+.stadium {
+	background: url(/img/Michigan_Stadium.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.stadium2 {
+	.image("/img/Michigan_Stadium_2.jpg")
+}
+.palmer {
+	.image("/img/palmer.jpg");
+}
+.lawquad {
+	.image("/img/lawquad.jpg");
+}
+
+.image(@img) {
+	z-index: -999;
+	background: url(@img) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.none {
+	background: white;
+	padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,7 +48,8 @@ body {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: 200;
 	background: transparent;
-	color:@color1;
+	color: black;
+	padding: 0px;
 }
 
 p {
@@ -33,41 +57,45 @@ p {
 }
 
 section {
+	padding-top:10%;
 	padding-bottom: 10%;
 }
 
-
+.logo {
+	height: 300px;
+}
+.navbar {
+	margin-top: -5px;
+}
 .navbar-inner {
-	height: 90px;
+	border-radius: 0px;
+	margin-top: 0px;
+	height: 60px;
 }
 
 .nav-cont {
-	margin-top: 25px;
-}
-
-.nav {
-	background: black;
+	margin-top: 10px;
 }
 
 .brand img {
-	height: 60px;
-	margin-top: -20px;
+	height: 50px;
+	margin-top: -15px;
 }
 
-.main {
-	margin-top: 50px;
+.container {
+	padding: 20px;
+	max-width: 900px;
 }
 
 .well {
-	background-color: @grayTrans;
 	border-radius: 0px;
 	border: none;
-	color: white;
+	color: black;
 }
 
 .header {
-	padding-top: 60px;
-	text-align: right;
+	margin-top: 60px;
+	text-align: center;
 	padding-bottom: 80px;
 }
 
@@ -97,9 +125,11 @@ section {
 	margin-top: -15px;
 }
 .numbers {
-	margin-top: -15px;
 	text-align: center;
+	color: black;
 }
+
+
 
 @media (max-width: 979px) {
 
@@ -118,9 +148,6 @@ section {
 // phone only
 @media (max-width: 480px) { 
 
-	.main {
-		margin-top: 0px;
-	}
 	.jumbo {
 		font-size: 40px;
 		line-height: 55px;
@@ -129,6 +156,13 @@ section {
 	.big {
 		font-size: 23px;
 		line-height: 40px;
+	}
+}
+
+#sponsors .well{
+	text-align: center;
+	img {
+		max-width: 60%;
 	}
 }
 
@@ -163,7 +197,7 @@ a {
 	color:@color1;
 }
 a:hover {
-	color: white;
+	color: black;
 	text-decoration: none;
 }
 

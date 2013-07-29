@@ -78,7 +78,13 @@ $(document).ready(function(){
 	// animate ticker
 	//tick();
 
+	load_video();
 });
+
+function load_video() {
+	if( window.innerWidth < 800) return;
+	$(".video").html('<iframe width="100%" height="100%" src="//www.youtube.com/embed/rcatzGEG3ro?autoplay=1&loop=1&controls=0&showinfo=0&autohide=1&wmode=opaque" frameborder="0"></iframe> ');
+}
 
 function tick() {
 	$('.ticker li:first').animate( {"marginLeft": "-=220px"}, 6000, 'linear', function() {
