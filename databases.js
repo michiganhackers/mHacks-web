@@ -5,7 +5,7 @@ var API = module.exports = exports;
 
 (function(MongoDB) {
 	var Server		= MongoDB.Server("alex.mongohq.com", 10095)
-		, Database	= MongoDB.Db("mhacks", Server, {safe: false})
+		, Database	= MongoDB.Db("mhacks", Server, {safe: true})
 	;
 
 	API.initMongoDB = function initMongoDB(cb) {
